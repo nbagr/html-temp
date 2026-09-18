@@ -1,0 +1,12 @@
+touch
+mkdir
+
+rm
+rm -rf
+
+mv - перенос/переименование
+cp
+
+env
+
+history
