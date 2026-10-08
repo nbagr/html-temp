@@ -1,19 +1,199 @@
+@font-face {
+    font-family: Roboto;
+    font-weight: 400;
+    src: url('./assets/fonts/Roboto/static/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 700;
+    src: url('./assets/fonts/Roboto/static/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 300;
+    src: url('./assets/fonts/Roboto/static/Roboto-Light.ttf');
+}
+
+
+html {
+    width: 100vw;
+    height: 100vh;
+
+    font: normal normal 400 16px/1.5em Roboto, 'sans-serif';    
+}
+
 body {
     background-color: beige;
     color: brown;
 }
 
-h1 {
-    color: blue;
-    font-size: 50px;
+.main-heading {
+    color: green;
+}
+
+/* псевдоклассы */
+/* по состоянию */
+.main-heading:hover {
+    color: #ae78df;
+}
+
+.main-heading:active {
+    color: wheat;
+}
+
+a:hover {
+    color: azure;
+}
+
+a:visited {
+    color: black;
+}
+
+a:focus {
+    color: #ae78df;
+}
+
+/* по расположению */
+
+/* p:nth-child(2n) {
+    color: white;
+}
+
+p:nth-of-type(2n) {
+    color: white;
+} */
+
+
+/* псевдоэлементы */
+.main-heading::after {
+    content: '_____________';
+    display: block;
+}
+
+.main-heading::before {
+    content: '!!!';
+}
+
+.some-list li::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('./assets/images/icons/logo.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+p::first-letter {
+    font-size: 40px;
+    color: red;
+}
+
+
+input::placeholder, textarea::placeholder {
+    font-size: 10px;
+}
+
+main {
+    width: 500px;
 }
 
 main p {
     color: #8119e1;
+
+    width: 50%;
+
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 500;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    font-family: Roboto, 'sans-serif';
+/* 
+    columns: 300px 2;
+    column-gap: 50px;
+    column-rule: 2px solid #000; */
+}
+
+.logo-image {
+    width: 50px;
+    height: auto;
+}
+
+.image-container {
+    width: 50%;
+
+    border: 2px solid #000;
+    
+}
+
+.image-container:hover {
+    width: 55%;
+
+    border: 2px solid #000;
+    
+}
+
+.content-image {
+    width: 100%;
+    height: auto;
+
+    vertical-align: middle;
+}
+
+.main-table, .main-table td, .main-table th {
+    border: 1px solid #000;
+    border-collapse: collapse;
+
+    padding: 5px;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+.main-table caption {
+    text-align: left;
+}
+
+
+.btn + input {
+    background-color: green;
+}
+
+
+.some-list {
+    list-style-type: none;
+}
+
+.text-about {
+    resize: none;
+    width: 200px;
+    height: 50px;
 }
 
 .footer-text {
     color: #000;
+
+    width: 200px;
+
+    border: 10px solid #ae78df;
+    /* outline: 10px solid #ae78df; */
+
+    /* border-width: 10px;
+    border-style: solid;
+    border-color: #61a9f0; */
+
+    margin: 20px;
+    padding: 20px;
+
+    /* padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-right: 30px; */
 }
 
 .some {
@@ -24,6 +204,12 @@ section {
     color: #000;
 }
 
+label[data-radio] {
+    color: green;
+}
+
 
 /* селекторы по тегу */
 /* селекторы по классу */
+
+/* селекторы по атрибуту */

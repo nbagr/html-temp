@@ -8,19 +8,19 @@
     <body>
         <header>
             <!-- Логотип сайта -->
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzl4X382tkUeEkk_LTJAdrAnn2zbS6ApDoBpVGC6RmGw&s=10" alt="Логотип" width="70px" height="auto"/>
+            <img src="./assets/images/icons/logo.jpeg" alt="Логотип" class="logo-image"/>
             <nav id="menu">
               <!-- Меню -->
               <ul>
                 <li><a href="/" id="menu-item">Главная</a></li>
                 <li><a href="/about">О нас</a></li>
-                <li><a href="/contacts">Контакты</a></li>
+                <li><a href="/">Контакты</a></li>
               </ul>
             </nav>
           </header>
           
           <main>
-            <h1>Хекслет — практические курсы по программированию</h1>
+            <h1 class="main-heading">Хекслет — практические курсы по программированию</h1>
           
             <p>
               Мы считаем, что настоящий программист должен понимать, как работает
@@ -40,16 +40,189 @@
               трудоустройства.
             </p>
 
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQru0yaadyYqUQAeaMi4wbrnnBgw_LtKbwBb1dh9CHAXgy_eu8hbEp9en89&s=10" alt="котик">
+            <p>
+              Хекслет — это готовый путь от абсолютного новичка до первого
+              трудоустройства.
+            </p>
+
+            <table class="main-table">
+              <caption>
+                My table
+              </caption>
+              <thead>
+                <tr>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>4</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="3">text</td>
+                  <td>text</td>
+                </tr>
+                <tr>
+                  <td>text</td>
+                  <td>text</td>
+                  <td>text</td>
+                  <td rowspan="2">text</td>
+                </tr>
+                <tr>
+                  <td>text</td>
+                  <td>text</td>
+                  <td>text</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="image-container">
+              <img src="./assets/images/content/kitty.jpeg" alt="котик" class="content-image">
+            </div>
+
+<!-- 
+            <div class="image-container">
+              <picture>
+                <source media="(min-width: 1024px)" srcset="https://picsum.photos/1280/500" />
+                <source media="(min-width: 700px)" srcset="https://picsum.photos/700/360" />
+              
+                <img src="https://picsum.photos/500/360" alt="Random Images" />
+              </picture>
+            </div> -->
+
+<!-- 
+            <video controls muted poster="./assets/images/content/kitty.jpeg" preload="metadata">
+              <source src="big-buck-bunny.mp4" type="video/mp4" />
+              <source src="big-buck-bunny.webm" type="video/webm" />
+            </video>
+            <audio>
+              <source src="audio.mp3" type="audio/mpeg" />
+              <source src="audio.ogg" type="audio/ogg" />
+            </audio> -->
           
             <section>
               <h2>Преимущества</h2>
-              <ul>
+
+
+              <!-- unordered list -->
+              <ul class="some-list">
                 <li>Много теории</li>
                 <li>Много практики</li>
                 <li>Много менторов</li>
               </ul>
+
+              <!-- ordered list -->
+              <ol>
+                <li>Много теории</li>
+                <li>Много практики</li>
+                <li>Много менторов</li>
+              </ol>
+
+              <!-- definition list -->
+              <dl>
+                <dt>HTML</dt>
+                <dd>Язык гипертекстовой разметки</dd>
+                <dt>CSS</dt>
+                <dd>Каскадные таблицы стилей</dd>
+              </dl>
             </section>
+
+            <form action="./">
+              <fieldset>
+                <legend>User</legend>
+                <div>
+                  <label for="name">Имя:</label>
+                  <input type="text" placeholder="Введите имя" name="name">
+                </div>
+  
+                <div>
+                  <label for="phone">Телефон:</label>
+                  <input type="number" placeholder="Введите номер телефона" name="phone">
+                </div>
+
+  
+                <div>
+                  <label for="email">Email:</label>
+                  <input type="email" placeholder="Введите email" name="email">
+                </div>
+  
+                <div>
+                  <label for="about">О себе:</label>
+                  <textarea name="about" id="about"  class="text-about" placeholder="Расскажите о себе"></textarea>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend data-radio>Radio</legend>
+                <div>
+                  <label data-radio="true">
+                    87.9
+                    <input type="radio" name="radio" value="87.9">
+                  </label>
+                  <br />
+  
+                  <label data-radio="true">
+                    99.7
+                    <input type="radio" name="radio" value="99.7">
+                  </label>
+                  <br />
+                  
+                  <label data-radio>
+                    101.1
+                    <input type="radio" name="radio" value="101.1">
+                  </label>
+                  <br />
+  
+                  <label data-radio>
+                    110.2
+                    <input type="radio" name="radio" value="110.2">
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Food</legend>
+                <div>
+                  <label>
+                    <input type="checkbox" name="dishes" value="pizza" />
+                    Пицца
+                  </label>
+                  <br />
+              
+                  <label>
+                    <input type="checkbox" name="dishes" value="burger" />
+                    Бургеры
+                  </label>
+                  <br />
+              
+                  <label>
+                    <input type="checkbox" name="dishes" value="pasta" />
+                    Паста
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>List</legend>
+
+                <div>
+                  <select name="category">
+                    <option value="computer">Компьютеры</option>
+                    <option value="phone">Телефоны</option>
+                    <option value="appliances">Бытовая техника</option>
+                  </select>
+                </div>
+              </fieldset>
+
+              <div>
+                <button class="btn">Отправить</button>
+                <input type="button" value="Отправить">
+                <input type="submit" value="Отправить">
+
+              </div>
+            </form>
+
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos officia laudantium reiciendis vel architecto ab necessitatibus exercitationem facilis illum eum esse iste porro eaque nesciunt tempore, et sit vero temporibus? <a href="./">Link</a></span>
           </main>
         <footer>
             <div>
