@@ -12,9 +12,9 @@
             <nav id="menu">
               <!-- Меню -->
               <ul>
-                <li><a href="/" id="menu-item">Главная</a></li>
-                <li><a href="/about">О нас</a></li>
-                <li><a href="/">Контакты</a></li>
+                <li><a href="/" id="menu-item" class="menu-el">Главная</a></li>
+                <li><a href="/about" class="menu-el">О нас</a></li>
+                <li><a href="/" class="menu-el">Контакты</a></li>
               </ul>
             </nav>
           </header>
@@ -113,9 +113,9 @@
 
               <!-- ordered list -->
               <ol>
-                <li>Много теории</li>
-                <li>Много практики</li>
-                <li>Много менторов</li>
+                <li data-list-item="some-true">Много теории</li>
+                <li data-list-item="true">Много практики</li>
+                <li data-list-item="true-some">Много менторов</li>
               </ol>
 
               <!-- definition list -->
@@ -127,102 +127,116 @@
               </dl>
             </section>
 
-            <form action="./">
+            <form action="./">         
               <fieldset>
-                <legend>User</legend>
+                <legend>Основная информация</legend>
+
                 <div>
                   <label for="name">Имя:</label>
-                  <input type="text" placeholder="Введите имя" name="name">
+                  <input name="name" type="text" placeholder="Введите имя">
                 </div>
-  
                 <div>
                   <label for="phone">Телефон:</label>
-                  <input type="number" placeholder="Введите номер телефона" name="phone">
+                  <input name="phone" type="number" placeholder="Введите номер телефона">
                 </div>
-
-  
                 <div>
                   <label for="email">Email:</label>
-                  <input type="email" placeholder="Введите email" name="email">
+                  <input name="email" type="email" placeholder="Введите email">
                 </div>
-  
                 <div>
                   <label for="about">О себе:</label>
-                  <textarea name="about" id="about"  class="text-about" placeholder="Расскажите о себе"></textarea>
+                  <textarea
+                  name="about"
+                  id="about"
+                  class="about-area"
+                  placeholder="Расскажите о себе"></textarea>
                 </div>
               </fieldset>
 
               <fieldset>
-                <legend data-radio>Radio</legend>
+                <legend>Радио</legend>
+
                 <div>
-                  <label data-radio="true">
-                    87.9
-                    <input type="radio" name="radio" value="87.9">
+                  <label>
+                    87.3
+                    <input type="radio" name="station" value="87.3">
                   </label>
-                  <br />
+                  <br>
   
-                  <label data-radio="true">
-                    99.7
-                    <input type="radio" name="radio" value="99.7">
+                  <label>
+                    96.4
+                    <input type="radio" name="station" value="96.4">
                   </label>
-                  <br />
-                  
-                  <label data-radio>
-                    101.1
-                    <input type="radio" name="radio" value="101.1">
-                  </label>
-                  <br />
+                  <br>
   
-                  <label data-radio>
+                  <label>
+                    104.5
+                    <input type="radio" name="station" value="104.5">
+                  </label>
+                  <br>
+  
+                  <label>
                     110.2
-                    <input type="radio" name="radio" value="110.2">
+                    <input type="radio" name="station" value="110.2">
                   </label>
                 </div>
               </fieldset>
 
               <fieldset>
-                <legend>Food</legend>
+                <legend>Еда</legend>
+
                 <div>
                   <label>
-                    <input type="checkbox" name="dishes" value="pizza" />
-                    Пицца
-                  </label>
-                  <br />
-              
-                  <label>
-                    <input type="checkbox" name="dishes" value="burger" />
-                    Бургеры
-                  </label>
-                  <br />
-              
-                  <label>
-                    <input type="checkbox" name="dishes" value="pasta" />
+                    <input type="checkbox" name="food" value="Паста">
                     Паста
                   </label>
+                  <br>
+  
+                  <label>
+                    <input type="checkbox" name="food" value="Бургер">
+                    Бургер
+                  </label>
+                  <br>
+  
+                  <label>
+                    <input type="checkbox" name="food" value="Пицца">
+                    Пицца
+                  </label>
                 </div>
               </fieldset>
-
+              
               <fieldset>
-                <legend>List</legend>
+                <legend>Техника</legend>
 
                 <div>
-                  <select name="category">
-                    <option value="computer">Компьютеры</option>
-                    <option value="phone">Телефоны</option>
-                    <option value="appliances">Бытовая техника</option>
+                  <select name="tech" id="tech">
+                    <option value="Компьютер">Компьютер</option>
+                    <option value="Телефон">Телефон</option>
+                    <option value="Ноутбук">Ноутбук</option>
                   </select>
                 </div>
               </fieldset>
 
-              <div>
-                <button class="btn">Отправить</button>
-                <input type="button" value="Отправить">
-                <input type="submit" value="Отправить">
-
-              </div>
+              <button class="send-btn">Отправить</button>
+              <input type="button" value="Отправить">
+              <input type="submit" value="Отправить">
             </form>
 
-            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos officia laudantium reiciendis vel architecto ab necessitatibus exercitationem facilis illum eum esse iste porro eaque nesciunt tempore, et sit vero temporibus? <a href="./">Link</a></span>
+            <section class="text-section">
+              <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos officia laudantium reiciendis vel architecto ab necessitatibus exercitationem facilis illum eum esse iste porro eaque nesciunt tempore, et sit vero temporibus? <a href="./">Link</a></span>
+            </section>
+
+            <div class="contact">
+              <div class="contact-body">
+                <div class="contact-title">
+                  <div class="contact-name">Джедай Падаванов</div>
+                  <div class="contact-time">10:12</div>
+                </div>
+                <span class="contact-message">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quasi repudiandae iusto amet neque quod inventore, quas nihil eum eveniet veniam voluptates ullam sapiente cumque facilis nam, adipisci nisi! Iste?
+                </span>
+              </div>
+            </div>
           </main>
         <footer>
             <div>
